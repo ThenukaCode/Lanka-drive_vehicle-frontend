@@ -23,9 +23,9 @@ Lanka Drive is a modern and responsive vehicle selling website frontend develope
 
 This project was created to improve frontend web development skills and demonstrate responsive UI/UX design concepts for a vehicle selling platform.
 
-##  Website Preview
 
-(Add screenshots here)
+
+
 
 ##  GitHub Repository
 

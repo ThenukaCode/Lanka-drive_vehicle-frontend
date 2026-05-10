@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicles — LankaDrive Auto Sales</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/Sleek red and gold car logo.png" class="logo" alt="LankaDrive">
+      <span class="ms-2 brand-text">LankaDrive</span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="vehicles.html">Vehicles</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn-gold" href="inquiry.html" style="padding:10px 24px; font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; font-weight:600; text-decoration:none; color:#0A0A0A;">Inquiry <i class="bi bi-arrow-right"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="vehicle-hero">
+  <div class="overlay">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Our Collection</span>
+      <h1>Premium <em>Vehicles</em></h1>
+      <p class="lead">Find the perfect car for your journey</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VEHICLE LIST ═══ -->
+<section class="vehicles-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-tag">Available Now</span>
+      <h2 class="section-title">Our <em>Inventory</em></h2>
+      <div class="gold-line center"></div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar justify-content-center mb-5">
+      <button class="filter-btn active" onclick="filterCars(event, 'all')">All Vehicles</button>
+      <button class="filter-btn" onclick="filterCars(event, 'sedan')">Sedan</button>
+      <button class="filter-btn" onclick="filterCars(event, 'suv')">SUV</button>
+      <button class="filter-btn" onclick="filterCars(event, 'luxury')">Luxury</button>
+    </div>
+
+    <div class="row g-4" id="vehicleGrid">
+
+      <div class="col-md-4 car-item sedan">
+        <div class="card vehicle-card">
+          <img src="img/toyota corolla.png" alt="Toyota Corolla">
+          <div class="card-body">
+            <h5>Toyota Corolla</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2022</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>15,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 9,500,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item suv">
+        <div class="card vehicle-card">
+          <img src="img/nissanX.png" alt="Nissan X-Trail">
+          <div class="card-body">
+            <h5>Nissan X-Trail</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2021</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>20,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 12,000,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item luxury">
+        <div class="card vehicle-card">
+          <img src="img/bmw3.png" alt="BMW 320i">
+          <div class="card-body">
+            <h5>BMW 320i</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2020</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>25,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 18,500,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item sedan">
+        <div class="card vehicle-card">
+          <img src="img/honda-civic.png" alt="Honda Civic">
+          <div class="card-body">
+            <h5>Honda Civic</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2019</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>30,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Manual</p>
+            <p class="price">LKR 8,000,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item sedan">
+        <div class="card vehicle-card">
+          <img src="img/toyotaP.png" alt="Toyota Prius">
+          <div class="card-body">
+            <h5>Toyota Prius</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2021</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>18,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 10,500,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item luxury">
+        <div class="card vehicle-card">
+          <img src="img/Audi.png" alt="Audi A4">
+          <div class="card-body">
+            <h5>Audi A4</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2020</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>22,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 16,000,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item luxury">
+        <div class="card vehicle-card">
+          <img src="img/benz.png" alt="Mercedes C-Class">
+          <div class="card-body">
+            <h5>Mercedes C-Class</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2019</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>28,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 19,000,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item suv">
+        <div class="card vehicle-card">
+          <img src="img/mazda.png" alt="Mazda CX-5">
+          <div class="card-body">
+            <h5>Mazda CX-5</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2022</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>12,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Automatic</p>
+            <p class="price">LKR 13,500,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 car-item sedan">
+        <div class="card vehicle-card">
+          <img src="img/shift.png" alt="Suzuki Swift">
+          <div class="card-body">
+            <h5>Suzuki Swift</h5>
+            <p><i class="bi bi-calendar3 me-2" style="color:var(--gold)"></i>Year: 2020</p>
+            <p><i class="bi bi-speedometer2 me-2" style="color:var(--gold)"></i>35,000 km</p>
+            <p><i class="bi bi-gear me-2" style="color:var(--gold)"></i>Manual</p>
+            <p class="price">LKR 6,500,000</p>
+            <a href="inquiry.html" class="btn btn-danger w-100">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">LankaDrive</div>
+        <div class="footer-tagline">Premium Auto Sales · Sri Lanka</div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-nav-title">Navigation</div>
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="vehicles.html">Vehicles</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="footer-nav-title">Contact</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i> Colombo, Sri Lanka</div>
+        <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i> +94 77 123 4567</div>
+        <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i> info@lankadrive.lk</div>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-nav-title">Newsletter</div>
+        <div class="d-flex">
+          <input type="email" class="footer-subscribe-input" placeholder="Your email">
+          <button class="footer-subscribe-btn">Join</button>
+        </div>
+        <div class="footer-socials mt-4">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 LankaDrive Auto Sales (Pvt) Ltd. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function filterCars(e, cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  document.querySelectorAll('.car-item').forEach(item => {
+    if (cat === 'all' || item.classList.contains(cat)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
